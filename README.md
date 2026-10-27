@@ -1,20 +1,16 @@
 # Data Cleaning and Exploratory Data Analysis (EDA)
 
 ## About the Project
-
-This project focuses on cleaning and exploring the Titanic passenger dataset using Python. It aims to identify data quality issues, handle missing values, analyze numerical and categorical variables, and discover patterns through data visualization.
+This project uses Python to clean and explore the Titanic passenger dataset. It focuses on handling missing values, identifying duplicate records, performing statistical analysis, and visualizing patterns related to passenger survival.
 
 ## Objectives
-
-- Identify missing values and duplicate records.
-- Clean and preprocess the dataset.
+- Identify and handle missing values.
+- Check and remove duplicate records.
 - Perform descriptive statistical analysis.
-- Explore relationships between different variables.
-- Create meaningful visualizations.
-- Interpret the results and document key findings.
+- Explore relationships between passenger characteristics and survival.
+- Create visualizations to communicate findings.
 
 ## Technologies Used
-
 - Python
 - Pandas
 - NumPy
@@ -23,58 +19,56 @@ This project focuses on cleaning and exploring the Titanic passenger dataset usi
 - Google Colab
 
 ## Dataset
+The project uses the Titanic dataset, which contains information about passenger age, sex, passenger class, ticket fare, embarkation details, and survival status.
 
-The Titanic dataset contains passenger information such as age, sex, passenger class, ticket fare, embarkation port, and survival status.
-
-**Dataset source:** [Titanic Dataset](https://github.com/mwaskom/seaborn-data/blob/master/titanic.csv)
+**Dataset Source:** [Titanic Dataset](https://github.com/mwaskom/seaborn-data/blob/master/titanic.csv)
 
 ## Project Workflow
-
-1. Data loading and inspection
-2. Missing-value analysis
-3. Duplicate checking
-4. Data cleaning and preprocessing
-5. Descriptive statistics
-6. Exploratory data analysis
-7. Data visualization
-8. Interpretation of findings
+1. Load and inspect the dataset.
+2. Identify missing values.
+3. Analyze duplicate records.
+4. Handle missing values and clean the data.
+5. Perform descriptive statistical analysis.
+6. Explore survival patterns.
+7. Create visualizations.
+8. Summarize findings and limitations.
 
 ## Visualizations
-
-The project includes the following visualizations:
-
-- Histogram of passenger ages
-- Box plot of ticket fares
-- Scatter plot of age versus ticket fare
-- Correlation heatmap
-- Survival rate by sex
-- Survival rate by passenger class
-- Missing-values chart
+- Passenger survival count
+- Survival by gender
+- Survival by passenger class
+- Distribution of passenger ages
+- Ticket fare distribution using a box plot
+- Average ticket fare by passenger class
 
 ## Key Findings
+- Overall survival rate in the cleaned dataset was approximately **41.29%**.
+- Female passengers had a higher survival rate (**73.97%**) than male passengers (**21.53%**).
+- First-class passengers had a survival rate of **63.33%**, compared with **50.61%** in second class and **25.94%** in third class.
+- The average passenger age was approximately **29.58 years**.
+- The average ticket fare was approximately **34.88**.
 
-The analysis investigates the distribution of passenger ages, variation in ticket fares, relationships between numerical variables, and differences in survival rates across passenger groups.
-
-Specific findings will be documented based on the results obtained from the notebook.
+These findings describe patterns in the dataset and do not establish cause-and-effect relationships.
 
 ## Data Cleaning
+- Dropped the `deck` column because it contained a substantial number of missing values.
+- Filled missing ages using the median.
+- Filled missing embarkation values using the mode.
+- Checked for and removed exact duplicate rows.
 
-The project examines missing values, duplicate records, and data types. Missing numerical values may be handled using median imputation, while missing categorical values may be handled using mode imputation. Columns with substantial missing data are evaluated before deciding whether to retain them.
+**Note:** Removing duplicate rows may remove valid passenger records if different passengers share identical values across all columns. This is an important limitation of the current cleaning approach.
 
 ## Limitations
-
-- The analysis is based on historical Titanic passenger data.
-- Observed relationships do not establish causation.
-- Missing-value treatment can influence the results.
-- The findings should not automatically be generalized to other populations.
+- The analysis uses historical Titanic passenger data.
+- Relationships observed in the data do not prove causation.
+- Missing-value handling can affect the results.
+- Removing duplicate rows may affect the dataset and survival statistics.
 
 ## How to Run
-
 1. Open `data_cleaning_and_eda.ipynb` in Google Colab or Jupyter Notebook.
-2. Ensure the required Python libraries are available.
+2. Ensure the required Python libraries are installed.
 3. Run the notebook cells in order.
-4. Review the data-cleaning steps, visualizations, and findings.
+4. Review the cleaning process, visualizations, and findings.
 
 ## Author
-
 **Mehak Garg**
